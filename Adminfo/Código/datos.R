@@ -1,16 +1,11 @@
-cposi = read.csv("Código/positivos_covid.csv", sep = ";")
-cfalle = read.csv("Código/fallecidos_covid.csv", sep = ";")
-
-# otros
-ds_obesity = read.csv("Código/obesity.csv")
-ds_LifeExpect = read.csv("Código/LifeExpect.csv")
-oceanity = read.csv("Código/bottle.csv")
-test = read.csv("Código/test.csv")
-train = read.csv("Código/train.csv")
-medi = read.csv("Código/insurance.csv")
-car = read.csv("Código/Car details v3.csv")
-
-
-
-
-
+setwd("C:/Users/Hernan/Documents/GitHub/TFAdminInfo/Adminfo/Código/app")
+#---------------------------------------------------------------------------------------
+# 2 Datasets elegidos (Queries, graficos)
+cposi = read.csv("../positivos_covid.csv", sep = ";")
+cfalle = read.csv("../fallecidos_covid.csv", sep = ";")
+#---------------------------------------------------------------------------------------
+# Regresion Lineal
+valuation = read.csv("../valuation.csv", sep = ";")
+#---------------------------------------------------------------------------------------
+# K-means, KNN 
+insurance = read.csv("../insurance.csv")
