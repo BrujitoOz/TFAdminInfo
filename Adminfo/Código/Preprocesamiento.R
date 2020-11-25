@@ -58,6 +58,11 @@ class(cfalle[,1])
 class(cfalle[,3])
 cfalle[,3] <- ymd(cfalle[,3])
 class(cfalle[,3])
+
+# Fecha_nacimiento
+class(cfalle[,6])
+cfalle[,6] <- ymd(cfalle[,6])
+class(cfalle[,6])
 #---------------------------------------------------------------------------------------
 # Eliminacion de outliers
 
@@ -80,6 +85,9 @@ which(cfalle$EDAD_DECLARADA %in% test$out)
 test$out
 # Reemplazando por la media de Edad
 cfalle[which(cfalle$EDAD_DECLARADA %in% test$out), 4] <- as.integer(mean(cfalle$EDAD_DECLARADA))
-# No hay mas outliers
+# Si siguen habiendo outliers, ejecutar de nuevo desde la linea 77
 boxplot(cfalle$EDAD_DECLARADA, ylab = "edad")
 #---------------------------------------------------------------------------------------
+###Preparamos el set de datos
+#escalar los datos
+insurance.scale<-as.data.frame(scale(insurance[,5:9])) 
